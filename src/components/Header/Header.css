@@ -1,0 +1,13 @@
+.header-parents{
+    background-color: #1C2B35;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-link a{
+    text-decoration: none;
+    color: white;
+    padding-left: 30px;
+}

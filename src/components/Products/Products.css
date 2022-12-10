@@ -1,0 +1,53 @@
+.products-container{
+    border: 2px solid gray;
+    border-radius: 5px;
+    position: relative;
+}
+
+.products-container img{
+    width: 286px;
+    height: 286px;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.products-text{
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.products-text p{
+    line-height: 15px;
+}
+
+.price-text{
+    margin-bottom: 50px;
+}
+
+.button-cart button{
+    margin-top: 20px;
+    width: 100%;
+    background-color: bisque;
+    font-size: medium;
+    font-weight: 700;
+    padding: 10px;
+    border-top: 2px solid gainsboro;
+    border: none;
+    border-radius: 0 5px 0 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.button-cart button:hover{
+    margin-top: 20px;
+    width: 100%;
+    background-color: rgb(207, 116, 12);
+    font-size: medium;
+    font-weight: 700;
+    padding: 10px;
+    border-top: 2px solid gainsboro;
+    border: none;
+    border-radius: 0 5px 0 5px;
+    position: absolute;
+    bottom: 0;
+}
