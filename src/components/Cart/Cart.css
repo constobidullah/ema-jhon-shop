@@ -1,0 +1,12 @@
+.cart-parents{
+    position: sticky;
+    top: 0;
+}
+
+.cart-parents h2{
+    text-align: center;
+}
+
+.cart-text{
+    padding-left: 15px;
+}
