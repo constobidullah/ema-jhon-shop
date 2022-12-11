@@ -29,7 +29,9 @@ const Shop = () => {
             }
         }
         setCart(savedCart)
-    },[products])
+    },[products]);
+
+    
 
     const handleAddToCart = (productInAnother) => {
         const newCart = [...cart, productInAnother];
