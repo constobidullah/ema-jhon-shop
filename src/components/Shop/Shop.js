@@ -4,34 +4,31 @@ import { useState, useEffect } from 'react';
 import Products from '../Products/Products';
 import Cart from '../Cart/Cart';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
+import { useLoaderData } from 'react-router-dom';
 
 const Shop = () => {
 
-    const [products, setProducts] = useState([]);
+    const products = useLoaderData();
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        fetch("products.json")
-        .then(res => res.json())
-        .then(data => setProducts(data))
-    },[]);
-
-
-    useEffect(() => {
         const storedCart = getStoredCart();
+
         const savedCart = [];
-        for(const id in storedCart){
+        for (const id in storedCart) {
             const addedProduct = products.find(product => product.id === id)
-            if(addedProduct){
+            if (addedProduct) {
                 const quantity = storedCart[id];
                 addedProduct.quantity = quantity;
                 savedCart.push(addedProduct)
             }
         }
-        setCart(savedCart)
-    },[products]);
 
-    
+        setCart(savedCart)
+
+    }, [products]);
+
+
 
     const handleAddToCart = (productInAnother) => {
         const newCart = [...cart, productInAnother];
@@ -46,10 +43,10 @@ const Shop = () => {
                 {
                     products.map(product => <Products
 
-                        key={product.id} 
+                        key={product.id}
                         product={product}
-                        handleAddToCart ={handleAddToCart}
-                        ></Products>)
+                        handleAddToCart={handleAddToCart}
+                    ></Products>)
                 }
             </div>
 
