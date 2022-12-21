@@ -10,3 +10,16 @@
 .cart-text{
     padding-left: 15px;
 }
+
+.clear-cart{
+    width: 90%;
+    margin: 12px;
+    border: none;
+    padding: 5px;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.clear-cart:hover{
+    cursor: pointer;
+}
