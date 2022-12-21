@@ -7,6 +7,7 @@ import Review from './components/Review/Review';
 import Shop from './components/Shop/Shop';
 import Support from './components/Support/Support';
 import MainLayout from './Layout/MainLayout/MainLayout';
+import { productsAndCart } from './utilities/productsAndCart';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       children: [
         {
           path: "/",
-          loader: () => fetch('products.json'),
+          loader: productsAndCart,
           element: <Shop></Shop>
         },
         {
@@ -26,7 +27,7 @@ function App() {
         },
         {
           path:"/orders",
-          loader: () => fetch('products.json'),
+          loader: productsAndCart,
           element: <Orders></Orders>
         },
         {

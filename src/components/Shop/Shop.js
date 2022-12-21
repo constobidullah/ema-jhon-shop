@@ -9,6 +9,7 @@ import { useLoaderData } from 'react-router-dom';
 const Shop = () => {
 
     const products = useLoaderData();
+    
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
@@ -16,7 +17,7 @@ const Shop = () => {
 
         const savedCart = [];
         for (const id in storedCart) {
-            const addedProduct = products.find(product => product.id === id)
+            const addedProduct = products.productsContainer.find(product => product.id === id)
             if (addedProduct) {
                 const quantity = storedCart[id];
                 addedProduct.quantity = quantity;
@@ -41,11 +42,12 @@ const Shop = () => {
 
             <div className='shop-item'>
                 {
-                    products.map(product => <Products
+                    products.productsContainer.map(product => <Products
 
                         key={product.id}
                         product={product}
                         handleAddToCart={handleAddToCart}
+                        
                     ></Products>)
                 }
             </div>
