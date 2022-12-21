@@ -33,6 +33,10 @@
     border-radius: 50%;
 }
 
+.delete-button button:hover{
+    cursor: pointer;
+}
+
 .delete-icon{
     font-size: xx-large;
     padding: 19px;
